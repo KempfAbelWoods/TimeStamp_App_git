@@ -853,11 +853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
+      "projectUniqueName": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
       "projectName": "TimeStamp_App.iOS",
-      "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
+      "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
       "packagesPath": "C:\\Users\\David Kempf\\.nuget\\packages\\",
-      "outputPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\obj\\",
+      "outputPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -874,8 +874,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
-              "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
+            "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
+              "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
             }
           }
         }

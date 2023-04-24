@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UNaZVfBa+/Qqk8KE6SyxKtzum2vcV82SulrFuepTaZfaac6y9+inFhRiu8me6uUDt0559s4vMdDo+B8J/aSjzg==",
+  "dgSpecHash": "17d4puIDavOFRVrDMWtrJSuW43Dhqcb0bLYJ37ItWbEEO6t1W3Uaig/clT8nzsfuxtLz4B+i8s8NO9k6Yg1vpA==",
   "success": true,
-  "projectFilePath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
+  "projectFilePath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David Kempf\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\David Kempf\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

@@ -427,11 +427,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
+      "projectUniqueName": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
       "projectName": "TimeStamp_App",
-      "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
+      "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
       "packagesPath": "C:\\Users\\David Kempf\\.nuget\\packages\\",
-      "outputPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\obj\\",
+      "outputPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David Kempf\\AppData\\Roaming\\NuGet\\NuGet.Config",

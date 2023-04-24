@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cQB3fAMdRXx+2AymZ+F9SzjnaO9QdN8y1UkW0WPq/1ix9AXsfkvTiKP8ameI4+/Ya3k5GOghJYu7rkMAuSnbBw==",
+  "dgSpecHash": "F7oN9NqQnHlOtber0Xgodi24otfBcAb6QGqDl3+FT+U23bjMsmqX1nOVYo4My0mpKvge83oudLyZiHSpZ2z25A==",
   "success": true,
-  "projectFilePath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
+  "projectFilePath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David Kempf\\.nuget\\packages\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Users\\David Kempf\\.nuget\\packages\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",

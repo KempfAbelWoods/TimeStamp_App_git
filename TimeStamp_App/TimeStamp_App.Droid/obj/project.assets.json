@@ -2218,11 +2218,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
+      "projectUniqueName": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
       "projectName": "TimeStamp_App.Droid",
-      "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
+      "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
       "packagesPath": "C:\\Users\\David Kempf\\.nuget\\packages\\",
-      "outputPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.Droid\\obj\\",
+      "outputPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -2239,8 +2239,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
-              "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
+            "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
+              "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
             }
           }
         }

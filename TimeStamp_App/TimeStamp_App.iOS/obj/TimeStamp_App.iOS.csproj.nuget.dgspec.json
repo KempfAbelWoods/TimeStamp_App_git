@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj": {}
+    "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj": {}
   },
   "projects": {
-    "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj": {
+    "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
+        "projectUniqueName": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
         "projectName": "TimeStamp_App.iOS",
-        "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
+        "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
         "packagesPath": "C:\\Users\\David Kempf\\.nuget\\packages\\",
-        "outputPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\obj\\",
+        "outputPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
-                "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
+              "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
+                "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
               }
             }
           }
@@ -57,14 +57,14 @@
         }
       }
     },
-    "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
+    "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
+        "projectUniqueName": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
         "projectName": "TimeStamp_App",
-        "projectPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
+        "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj",
         "packagesPath": "C:\\Users\\David Kempf\\.nuget\\packages\\",
-        "outputPath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App\\obj\\",
+        "outputPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\David Kempf\\AppData\\Roaming\\NuGet\\NuGet.Config",
