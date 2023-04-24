@@ -12,6 +12,7 @@ namespace TimeStamp_App
         public MainPage()
         {
             InitializeComponent();
+            //sean dumm
         }
     }
 }
