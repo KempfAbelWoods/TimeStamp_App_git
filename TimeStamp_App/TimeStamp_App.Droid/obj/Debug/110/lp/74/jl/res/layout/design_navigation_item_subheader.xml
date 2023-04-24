@@ -14,11 +14,12 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-
-<view xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/Widget.Design.Snackbar"
-    class="com.google.android.material.snackbar.Snackbar$SnackbarLayout"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+    android:layout_height="?attr/listPreferredItemHeightSmall"
+    android:paddingLeft="?attr/listPreferredItemPaddingLeft"
+    android:paddingRight="?attr/listPreferredItemPaddingRight"
+    android:gravity="center_vertical|start"
+    android:maxLines="1"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+    android:textColor="?android:textColorSecondary"/>
