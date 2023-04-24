@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ej2x3RWMowF2YOn+bqRi8AkIMCobKhIUkdapYmIaXgknZoNEF9uOK4TXOyCBGFmm83ckmmp40OTjS2WLiHrjWw==",
+  "success": true,
+  "projectFilePath": "D:\\Codedateien\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.iOS\\TimeStamp_App.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\David Kempf\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
