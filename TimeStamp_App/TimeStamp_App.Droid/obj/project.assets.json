@@ -2213,34 +2213,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David Kempf\\.nuget\\packages\\": {}
+    "C:\\Users\\Sean\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
+      "projectUniqueName": "C:\\Users\\Sean\\Documents\\Hochschule\\Projektlabor\\Code\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
       "projectName": "TimeStamp_App.Droid",
-      "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
-      "packagesPath": "C:\\Users\\David Kempf\\.nuget\\packages\\",
-      "outputPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\obj\\",
+      "projectPath": "C:\\Users\\Sean\\Documents\\Hochschule\\Projektlabor\\Code\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
+      "packagesPath": "C:\\Users\\Sean\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sean\\Documents\\Hochschule\\Projektlabor\\Code\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\David Kempf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Sean\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid11.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
-              "projectPath": "D:\\Codedateien\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
+            "C:\\Users\\Sean\\Documents\\Hochschule\\Projektlabor\\Code\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj": {
+              "projectPath": "C:\\Users\\Sean\\Documents\\Hochschule\\Projektlabor\\Code\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App\\TimeStamp_App.csproj"
             }
           }
         }
