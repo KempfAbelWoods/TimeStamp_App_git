@@ -22,7 +22,7 @@
             NetworkStream networkStream = client.GetStream();
 
             // Sende Daten an den Server
-            string message = "Hallo vom Client!";
+            string message = "1234";
             byte[] data = Encoding.ASCII.GetBytes(message);
             networkStream.Write(data, 0, data.Length);
 
@@ -40,5 +40,4 @@
         }
     }
 
-    }
 }
