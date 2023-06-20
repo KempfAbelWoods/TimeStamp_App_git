@@ -6,9 +6,18 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label x:Name="Textfeld"
+               Text="Welcome to Xamarin.Forms!" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <!-- Place new controls here -->
+        <Button Text="Click Me" 
+                Clicked="Button_OnClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
     </StackLayout>
+    
+
+    
 
 </ContentPage>

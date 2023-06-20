@@ -1,4 +1,6 @@
-﻿namespace TimeStamp_App.Connection
+﻿using System.Diagnostics;
+
+namespace TimeStamp_App.Connection
 {
     using System;
     using System.Net.Sockets;
@@ -6,17 +8,19 @@
 
     public class Client
     {
-        private const int Port = 8888;
+        private const int Port = 8080;
+        public static string Ausgabe = "";
 
-        public static void Main()
+        public static void SocketClient()
         {
-            string serverIpAddress = "127.0.0.1";
+            string serverIpAddress = "192.168.2.110";
+            
 
             // Erstelle eine TCP/IP-Verbindung
             TcpClient client = new TcpClient();
             client.Connect(serverIpAddress, Port);
 
-            Console.WriteLine("Verbunden mit Server.");
+            Trace.WriteLine("Verbunden mit Server.");
 
             // Erstelle ein NetworkStream-Objekt für die Kommunikation
             NetworkStream networkStream = client.GetStream();
@@ -31,13 +35,13 @@
             int bytesRead = networkStream.Read(buffer, 0, buffer.Length);
             string response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
 
-            Console.WriteLine("Antwort empfangen: " + response);
+            Trace.WriteLine("Antwort empfangen: " + response);
 
             // Schließe die Verbindung
             client.Close();
 
-            Console.WriteLine("Verbindung geschlossen.");
+            Trace.WriteLine("Verbindung geschlossen.");
+            Ausgabe = "Verbindung geschlossen";
         }
     }
-
 }
