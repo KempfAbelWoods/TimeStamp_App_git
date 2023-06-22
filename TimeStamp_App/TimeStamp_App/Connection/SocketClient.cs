@@ -10,13 +10,7 @@ namespace TimeStamp_App.Connection
     {
         private const int Port = 8080;
         public static string Ausgabe = "";
-
-        public Client(string enteredUser, string enteredPassword)
-        {
-            string User = enteredUser;
-            string Password = enteredPassword;
-        }
-
+        
         public static void SocketClient()
         {
             string serverIpAddress = "192.168.2.110";
@@ -30,7 +24,7 @@ namespace TimeStamp_App.Connection
             // Erstelle ein NetworkStream-Objekt für die Kommunikation
             NetworkStream networkStream = client.GetStream();
             // Sende Daten an den Server
-            string message = "1234";
+            string message = Config.enteredPassword;
             byte[] data = Encoding.ASCII.GetBytes(message);
             networkStream.Write(data, 0, data.Length);
 

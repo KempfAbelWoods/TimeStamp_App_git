@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "grFBTWdRdBesHl8+OLweD4Slgd3S0JSF/mFfZ8uz8r5DzPsWzAJCECP5DdPej/k3czjgyB5mDvWd6a01mKNL5A==",
+  "dgSpecHash": "rmwGrvssMZbrvWZLv7mN4Mahiu/yF0+U2qsA663h/k0d72N7/NvJEhnVtL5tInGz4UM+QpIDufY/pZhHY8eLfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sean\\Documents\\Hochschule\\Projektlabor\\Code\\Timestamp_App_git\\TimeStamp_App\\TimeStamp_App.Droid\\TimeStamp_App.Droid.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Sean\\.nuget\\packages\\sqlite-net-pcl\\1.9.141-beta\\sqlite-net-pcl.1.9.141-beta.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.2\\sqlitepclraw.bundle_green.2.1.2.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.1.2\\sqlitepclraw.lib.e_sqlite3.android.2.1.2.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Sean\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Sean\\.nuget\\packages\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Users\\Sean\\.nuget\\packages\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Users\\Sean\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",
