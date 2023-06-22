@@ -1,8 +1,7 @@
 ﻿using System;
+using TimeStamp_App.Ansichten;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace TimeStamp_App
 {
@@ -11,8 +10,7 @@ namespace TimeStamp_App
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()
