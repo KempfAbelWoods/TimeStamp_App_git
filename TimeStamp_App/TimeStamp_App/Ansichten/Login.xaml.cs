@@ -14,12 +14,37 @@ namespace TimeStamp_App.Ansichten
         public Login()
         {
             InitializeComponent();
+            var data = new Db_Users
+            {
+                ID = "1",
+                Name = "Pimmel",
+                Username = "Username",
+                Role = "Role",
+                Rights = "Rights",
+                Password = "Password",
+            };
             
             var Error = Db_Users.CreateTable(Paths.sqlite_path);
             if (Error != null)
             {
                 DisplayAlert("Error", Error.GetException().Message, "OK");
             }
+            
+            var err = Rw_Users.Write(new List<Db_Users> { data },Paths.sqlite_path);
+            if (err != null)
+            {
+                DisplayAlert("Error", err.GetException().Message, "OK");
+            }
+            
+            //Spalte mit alten Daten löschen
+            var (list, err1) = Rw_Users.ReadwithID("1", Paths.sqlite_path);
+
+            if (err1 != null)
+            {
+                DisplayAlert("Error", err1.GetException().Message, "OK");
+            }
+            
+            UserEntry.Text = list[0].Name;
 
         }
 

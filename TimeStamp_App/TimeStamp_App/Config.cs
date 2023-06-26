@@ -1,8 +1,10 @@
-﻿namespace TimeStamp_App
+﻿using System.IO;
+
+namespace TimeStamp_App
 {
     public static class Paths
     {
-        public const string sqlite_path = "data.sqlite"; //"/identifier.sqlite"; //  /Page Navigation App/data/data.sqlite;
+        public static string sqlite_path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "data.sqlite");
     }
     public static class Config
     {

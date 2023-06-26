@@ -21,6 +21,10 @@
                HorizontalOptions="Center"
                VerticalOptions="Center"></Editor>
         <Grid ColumnDefinitions="*,*">
+              
+               <Label x:Name="CheckBox_Description"></Label>
+        </Grid>
+        <Grid ColumnDefinitions="*,*">
              <Button Text="Anmelden" 
                      Clicked="Anmelden_OnClicked"/>
              <Button Grid.Column="1"
