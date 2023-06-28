@@ -34,6 +34,8 @@
                     Clicked="ToDo_Clicked" />
             <Button Text="Persönlicher Terminkalender"
                     Clicked="Calendar_Clicked" />
+            <Button Text="Settings"
+                    Clicked="Settings_Clicked" />
             <Button Text="Zurück zur Anmeldung"
                     Clicked="GoBackToLogin"
                     HorizontalOptions="End"

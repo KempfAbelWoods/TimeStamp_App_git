@@ -39,7 +39,6 @@ namespace TimeStamp_App.Connection
             client.Close();
 
             Trace.WriteLine("Verbindung geschlossen.");
-            Ausgabe = "Verbindung geschlossen";
         }
     }
     

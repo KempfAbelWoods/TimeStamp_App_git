@@ -20,13 +20,18 @@
                Placeholder="Eingabe Passwort"
                HorizontalOptions="Center"
                VerticalOptions="Center"></Editor>
+
         <Grid ColumnDefinitions="*,*">
-              
-               <Label x:Name="CheckBox_Description"></Label>
+               <CheckBox x:Name="StayLogged" 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center"></CheckBox>
+               <Label Grid.Column="1" 
+                      x:Name="StayLoggedIn"
+                      Text="Stay Logged in"></Label>
         </Grid>
         <Grid ColumnDefinitions="*,*">
              <Button Text="Anmelden" 
-                     Clicked="Anmelden_OnClicked"/>
+                     Clicked="Log_in"/>
              <Button Grid.Column="1"
                      Text="Abbrechen" 
                      Clicked="Abbrechen_OnClicked"/>

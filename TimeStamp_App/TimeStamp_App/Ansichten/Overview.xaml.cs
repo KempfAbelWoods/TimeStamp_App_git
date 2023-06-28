@@ -24,7 +24,7 @@ namespace TimeStamp_App.Ansichten
 
         private async void GoBackToLogin(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new Login());
         }
 
         private async void Stamp_Clicked(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace TimeStamp_App.Ansichten
         private async void Calendar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Calendar());
+        }
+
+        private async void Settings_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Settings());
         }
     }
 }
