@@ -10,5 +10,6 @@ namespace TimeStamp_App
     {
         public static string enteredUser="";
         public static string enteredPassword="";
+        public static string ConnectionCode = "";
     }
 }

@@ -51,5 +51,10 @@ namespace TimeStamp_App.Ansichten
         {
             await Navigation.PushAsync(new Settings());
         }
+
+        private async void Connected_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataTransfer());
+        }
     }
 }

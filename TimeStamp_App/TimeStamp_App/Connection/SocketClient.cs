@@ -11,7 +11,7 @@ namespace TimeStamp_App.Connection
         private const int Port = 8080;
         public static string Ausgabe = "";
         
-        public static void SocketClient()
+        public async static void SocketClient(string senddata)
         {
             string serverIpAddress = "192.168.2.110";
 
@@ -23,14 +23,15 @@ namespace TimeStamp_App.Connection
 
             // Erstelle ein NetworkStream-Objekt für die Kommunikation
             NetworkStream networkStream = client.GetStream();
+            
             // Sende Daten an den Server
-            string message = Config.enteredPassword;
+            string message = Config.ConnectionCode;
             byte[] data = Encoding.ASCII.GetBytes(message);
             networkStream.Write(data, 0, data.Length);
 
             // Empfange die Antwort vom Server
             byte[] buffer = new byte[1024];
-            int bytesRead = networkStream.Read(buffer, 0, buffer.Length);
+            int bytesRead = await  networkStream.ReadAsync(buffer, 0, buffer.Length);
             string response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
 
             Trace.WriteLine("Antwort empfangen: " + response);

@@ -44,7 +44,7 @@ namespace TimeStamp_App.Ansichten
         }
         
          private async void Log_in(object sender, EventArgs e)
-    {
+        {
         var (list, err) = Rw_Users.ReadwithUserName(UserEntry.Text, Paths.sqlite_path);
         if (err != null)
         {
@@ -94,7 +94,7 @@ namespace TimeStamp_App.Ansichten
                     }
                 }
                 
-                Client.SocketClient();
+                Client.SocketClient(Config.enteredUser);
                 await Navigation.PushAsync(new Overview());
                 
             }
@@ -105,15 +105,7 @@ namespace TimeStamp_App.Ansichten
         }
     }
 
-
-        private async void Anmelden_OnClicked(object sender, EventArgs e)
-        {
-            Client.SocketClient();
-            Textfeld.Text = Client.Ausgabe;
-            await Navigation.PushAsync(new Overview());
-        }
-
-        void Abbrechen_OnClicked(object sender, EventArgs e)
+         void Abbrechen_OnClicked(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
