@@ -7,6 +7,7 @@
         <StackLayout>
             <Button Text="Users löschen/ einfügen" Clicked="Create_Table_Users"></Button>
             <Button Text="Settings löschen/ einfügen" Clicked="Create_Table_Settings"></Button>
+            <Button Text="Tasks löschen/ einfügen" Clicked="Create_Table_Tasks"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

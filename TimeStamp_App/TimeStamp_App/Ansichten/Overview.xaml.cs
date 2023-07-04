@@ -34,7 +34,7 @@ namespace TimeStamp_App.Ansichten
 
         private async void Orders_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Orders());
+            await Navigation.PushAsync(new Tasks());
         }
 
         private async void ToDo_Clicked(object sender, EventArgs e)

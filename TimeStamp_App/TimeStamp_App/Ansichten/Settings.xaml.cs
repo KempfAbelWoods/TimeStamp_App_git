@@ -34,4 +34,13 @@ public partial class Settings : ContentPage
             DisplayAlert("Error", Error.GetException().Message, "OK");
         }
     }
+    
+    private void Create_Table_Tasks(object sender, EventArgs e)
+    {
+        var Error = Db_Tasks.CreateTable(Paths.sqlite_path);
+        if (Error != null)
+        {
+            DisplayAlert("Error", Error.GetException().Message, "OK");
+        }
+    }
 }

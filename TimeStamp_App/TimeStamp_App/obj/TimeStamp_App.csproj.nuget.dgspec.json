@@ -44,6 +44,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2012, )"

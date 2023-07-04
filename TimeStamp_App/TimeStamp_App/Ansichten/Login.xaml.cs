@@ -14,36 +14,9 @@ namespace TimeStamp_App.Ansichten
         public Login()
         {
             InitializeComponent();
-            var data = new Db_Users
-            {
-                ID = "1",
-                Name = "user",
-                Username = "user",
-                Role = "Role",
-                Rights = "Rights",
-                Password = "1234",
-            };
-
-            //Spalte mit alten Daten löschen
-            var (list, err1) = Rw_Users.ReadwithID("1", Paths.sqlite_path);
-
-            if (err1 != null)
-            {
-                DisplayAlert("Error", err1.GetException().Message, "OK");
-            }
-            
-            //neue Zeile einfügen
-            var err = Rw_Users.Write(new List<Db_Users> { data },Paths.sqlite_path);
-            if (err != null)
-            {
-                DisplayAlert("Error", err.GetException().Message, "OK");
-            }
-
-            UserEntry.Text = list[0].Name;
-
         }
-        
-         private async void Log_in(object sender, EventArgs e)
+
+        private async void Log_in(object sender, EventArgs e)
         {
         var (list, err) = Rw_Users.ReadwithUserName(UserEntry.Text, Paths.sqlite_path);
         if (err != null)

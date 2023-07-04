@@ -12,12 +12,11 @@ namespace TimeStamp_App
         public App()
         {
             InitializeComponent();
-
+            MainPage = new NavigationPage(new Overview());
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
             //hier wird beim Startup der in der Datenbank angemeldete Benutzer automatisch angemeldet
             var (data,err) = Rw_Settings.ReadwithID("4", Paths.sqlite_path);
             if (err!=null)

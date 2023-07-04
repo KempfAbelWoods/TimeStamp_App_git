@@ -1,4 +1,6 @@
-﻿namespace TimeStamp_App.Helper;
+﻿using System;
+
+namespace TimeStamp_App.Helper;
 
 public class Error
 {
@@ -29,7 +31,7 @@ public class Error
     /// Error als Exception zurueckgeben
     /// </summary>
     /// <returns></returns>
-    public System.Exception GetException()
+    public Exception GetException()
     {
         return _ex;
     }

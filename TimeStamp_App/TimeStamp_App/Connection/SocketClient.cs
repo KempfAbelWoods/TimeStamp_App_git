@@ -1,4 +1,7 @@
 ﻿using System.Diagnostics;
+using Newtonsoft.Json;
+using TimeStamp_App.DB;
+using TimeStamp_App.Helper;
 
 namespace TimeStamp_App.Connection
 {
@@ -10,9 +13,14 @@ namespace TimeStamp_App.Connection
     {
         private const int Port = 8080;
         public static string Ausgabe = "";
-        
+
         public async static void SocketClient(string senddata)
         {
+            byte[] buffer = new byte[1024];
+            byte[] data;
+            int bytesRead;
+            string response;
+            string message;
             string serverIpAddress = "192.168.2.110";
 
             // Erstelle eine TCP/IP-Verbindung
@@ -23,18 +31,34 @@ namespace TimeStamp_App.Connection
 
             // Erstelle ein NetworkStream-Objekt für die Kommunikation
             NetworkStream networkStream = client.GetStream();
-            
+
             // Sende Daten an den Server
-            string message = Config.ConnectionCode;
-            byte[] data = Encoding.ASCII.GetBytes(message);
+            message = Config.ConnectionCode;
+            data = Encoding.ASCII.GetBytes(message);
             networkStream.Write(data, 0, data.Length);
 
+            // Empfange Bestätigung für Senden
+            bytesRead = await networkStream.ReadAsync(buffer, 0, buffer.Length);
+            response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+
+            // Senden von Tasks
+            if (response == "Freigabe")
+            {
+                var (taskList, error) = Rw_Tasks.Read("", Paths.sqlite_path);
+                string jsonString = JsonConvert.SerializeObject(taskList);
+                data = Encoding.ASCII.GetBytes(jsonString);
+                networkStream.Write(data,0,data.Length);
+            }
+
+
             // Empfange die Antwort vom Server
-            byte[] buffer = new byte[1024];
-            int bytesRead = await  networkStream.ReadAsync(buffer, 0, buffer.Length);
-            string response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+            bytesRead = await networkStream.ReadAsync(buffer, 0, buffer.Length);
+            response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
 
             Trace.WriteLine("Antwort empfangen: " + response);
+
+            var lists = ConnectionHelper.DeSerializeList(response);
+            ConnectionHelper.RW_Users_Tasks(lists);
 
             // Schließe die Verbindung
             client.Close();
@@ -42,5 +66,4 @@ namespace TimeStamp_App.Connection
             Trace.WriteLine("Verbindung geschlossen.");
         }
     }
-    
 }
