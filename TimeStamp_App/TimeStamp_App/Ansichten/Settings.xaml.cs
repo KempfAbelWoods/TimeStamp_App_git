@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TimeStamp_App.DB;
+using TimeStamp_App.Helper;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -41,6 +42,12 @@ public partial class Settings : ContentPage
         if (Error != null)
         {
             DisplayAlert("Error", Error.GetException().Message, "OK");
+        }
+
+        var(List, err)= Rw_Tasks.Read("", Paths.sqlite_path);
+        if (err != null)
+        {
+            DisplayAlert("Error", err.GetException().Message, "OK");
         }
     }
 }

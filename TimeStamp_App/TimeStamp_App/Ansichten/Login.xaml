@@ -17,7 +17,8 @@
                HorizontalOptions="Center"
                VerticalOptions="Center"></Editor>
         <Editor x:Name="PasswordEntry"
-               Placeholder="Eingabe Passwort"
+                Width="100"
+                Placeholder="Eingabe Passwort"
                HorizontalOptions="Center"
                VerticalOptions="Center"></Editor>
 

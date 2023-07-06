@@ -21,7 +21,7 @@ public class Db_Tasks
         try
         {
             conn = new SQLiteConnection(dataSource);
-            conn.CreateTable<Db_Users>();
+            conn.CreateTable<Db_Tasks>();
 
             return null;
         }
