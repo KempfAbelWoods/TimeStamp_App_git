@@ -20,6 +20,6 @@ public partial class DataTransfer : ContentPage
     private void Button_OnClicked(object sender, EventArgs e)
     {
         Config.ConnectionCode = ConnectionCode.Text;
-        Client.SocketClient(ConnectionCode.Text);
+        Client.SocketClientCode(ConnectionCode.Text);
     }
 }

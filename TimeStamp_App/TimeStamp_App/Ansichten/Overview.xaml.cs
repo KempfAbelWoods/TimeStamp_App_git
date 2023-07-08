@@ -16,12 +16,6 @@ namespace TimeStamp_App.Ansichten
             InitializeComponent();
         }
 
-        async void OnButtonClicked(object sender, EventArgs e)
-        {
-            // Launch the specified URL in the system browser.
-            await DisplayAlert("Achtung", "Button Clicked", "OK");
-        }
-
         private async void GoBackToLogin(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Login());
@@ -35,16 +29,6 @@ namespace TimeStamp_App.Ansichten
         private async void Orders_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Tasks());
-        }
-
-        private async void ToDo_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ToDos());
-        }
-
-        private async void Calendar_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Calendar());
         }
 
         private async void Settings_Clicked(object sender, EventArgs e)

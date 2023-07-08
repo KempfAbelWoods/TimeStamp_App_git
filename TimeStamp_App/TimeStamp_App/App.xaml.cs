@@ -18,7 +18,7 @@ namespace TimeStamp_App
         protected override void OnStart()
         {
             //hier wird beim Startup der in der Datenbank angemeldete Benutzer automatisch angemeldet
-            var (data,err) = Rw_Settings.ReadwithID("4", Paths.sqlite_path);
+            var (data,err) = Rw_Settings.ReadwithID("1", Paths.sqlite_path);
             if (err!=null)
             {
                 Trace.WriteLine(err.GetException().ToString());

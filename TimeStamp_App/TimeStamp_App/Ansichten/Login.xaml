@@ -14,10 +14,11 @@
         <!-- Place new controls here -->
         <Editor x:Name="UserEntry"
                Placeholder="Eingabe User"
+               WidthRequest="200"
                HorizontalOptions="Center"
                VerticalOptions="Center"></Editor>
         <Editor x:Name="PasswordEntry"
-                Width="100"
+                WidthRequest="200"
                 Placeholder="Eingabe Passwort"
                HorizontalOptions="Center"
                VerticalOptions="Center"></Editor>
@@ -37,5 +38,9 @@
                      Text="Abbrechen" 
                      Clicked="Abbrechen_OnClicked"/>
         </Grid>
+        <Label x:Name="AnzeigeFehler"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+        </Label>
     </StackLayout>
 </ContentPage>

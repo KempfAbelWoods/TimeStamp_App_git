@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SQLite;
 using TimeStamp_App.Helper;
 
@@ -10,9 +11,6 @@ public class Db_Settings
     public string Name { get; set; }
     public string Ressource { get; set; }
     public string Comment { get; set; }
-
-
-
 
     public static Error CreateTable(string dataSource)
     {

@@ -35,6 +35,5 @@ public class ConnectionHelper
     {
         Rw_Tasks.Write(lists.Tasks, Paths.sqlite_path);
         Rw_Users.Write(lists.UsersList, Paths.sqlite_path);
-        // Überprüfen was davor drinsteht
     }
 }        
