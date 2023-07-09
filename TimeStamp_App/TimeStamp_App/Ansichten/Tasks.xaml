@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" Padding="10">
-                <Label Text="ID" FontSize="Small" WidthRequest="20"/>
+                <Label Text="ID" FontSize="Small" WidthRequest="30"/>
                 <Label Text="Description" FontSize="Small" WidthRequest="150"/>
                 <Label Text="Estimated Hours" FontSize="Small" WidthRequest="100"/>
                 <Label Text="Actual Hours" FontSize="Small" WidthRequest="100"/>
@@ -16,7 +16,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="10">
-                                    <Label Text="{Binding ID}" WidthRequest="20" />
+                                    <Label Text="{Binding ID}" WidthRequest="30" />
                                     <Label Text="{Binding Description}" WidthRequest="150" />
                                     <Label Text="{Binding EstimatedHours}" WidthRequest="140" />
                                     <Label Text="{Binding ActualHours}" WidthRequest="130" />

@@ -28,14 +28,17 @@ namespace TimeStamp_App
                 var (list,error) =Rw_Users.ReadwithUserName(data[0].Ressource, Paths.sqlite_path);
                 if (error!=null)
                 {
-                    Trace.WriteLine(err.GetException().ToString()); 
-                    MainPage = new NavigationPage(new Login());
+                    Trace.WriteLine(err.GetException().ToString());
                 }
-                else if (list.Count == 1)
+                if (data[0].Ressource != "")
                 {
                     Config.enteredUser = list[0].Username;
                     Config.enteredPassword = list[0].Password;
                     MainPage = new NavigationPage(new Overview());
+                }
+                else
+                {
+                    MainPage = new NavigationPage(new Login());
                 }
 
             }

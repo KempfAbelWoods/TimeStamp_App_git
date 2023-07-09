@@ -11,7 +11,7 @@ namespace TimeStamp_App.Ansichten
 {
     public partial class Login : ContentPage
     {
-
+        public bool LoggedIn;
         public Login()
         {
             InitializeComponent();
@@ -69,6 +69,35 @@ namespace TimeStamp_App.Ansichten
                 }
                 else
                 {
+                    var data = new Db_Settings
+                    {
+                        ID = "1",
+                        Name = "LoggedUser",
+                        Ressource = "",
+                        Comment = "Hier steht der aktuell angemeldete Benutzer, wenn niemand angemeldet ist ist das Feld leer"
+                    };
+                    //alte Zeile löschen
+                    var (Row, err2) = Rw_Settings.ReadwithID("1", Paths.sqlite_path);
+                    if (err2 != null)
+                    {
+                        DisplayAlert("Error", err2.GetException().Message, "OK");
+                    }
+                    if (Row.Count == 1)
+                    {
+                        var error = Rw_Settings.Delete(Row, Paths.sqlite_path);
+                        if (error != null)
+                        {
+                            DisplayAlert("Error", error.GetException().Message, "OK");
+                        }
+                    }
+                    //neue Zeile einfügen
+                    var err1 = Rw_Settings.Write(new List<Db_Settings>{data}, Paths.sqlite_path);
+                    if (err1 != null)
+                    {
+                        DisplayAlert("Error", err.GetException().Message, "OK");
+                    }
+
+                    LoggedIn = true;
                     Client.SocketClientUser("");
                 }
                 await Navigation.PushAsync(new Overview());

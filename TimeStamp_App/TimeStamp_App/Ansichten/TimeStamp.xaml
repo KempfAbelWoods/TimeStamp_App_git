@@ -4,11 +4,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TimeStamp_App.Ansichten.TimeStamp">
     <ContentPage.Content>
-        <StackLayout>
-                <Button Text="Back"
-                        Clicked="GoBackToOverview_Clicked"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand" />
-            </StackLayout>
+        <StackLayout
+            Margin="20"
+            Spacing="20">
+            
+            <Label FontSize="22" 
+                   Text="Die zu bearbeitende Task auswählen"></Label>
+            <Picker x:Name="Picker" 
+                    WidthRequest="200" 
+                    HorizontalOptions="Center"></Picker>
+            <Button Text="Arbeitsauftrag beginnen"
+                    Clicked="TimeStart" />
+            <Button Grid.Column="1"
+                    Text="Arbeitsauftrag beenden"
+                    Clicked="TimeStop" />
+            <Button Text="Back"
+                    Clicked="GoBackToOverview_Clicked"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
