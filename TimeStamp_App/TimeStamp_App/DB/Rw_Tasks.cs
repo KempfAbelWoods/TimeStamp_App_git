@@ -103,6 +103,11 @@ public class Rw_Tasks
         var where = $"Username='{Username}'";
         return Read(where, dataSource);
     }
+    public static (List<Db_Tasks>, Error) ReadwithDescription(string Description, string dataSource)
+    {
+        var where = $"Name='{Description}'";
+        return Read(where, dataSource);
+    }
     
     public static (List<Db_Tasks>, Error) Read(string where, string dataSource)
     {

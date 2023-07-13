@@ -5,21 +5,21 @@
              x:Class="TimeStamp_App.Ansichten.Tasks">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="10">
-                <Label Text="ID" FontSize="Small" WidthRequest="30"/>
-                <Label Text="Description" FontSize="Small" WidthRequest="150"/>
-                <Label Text="Estimated Hours" FontSize="Small" WidthRequest="100"/>
-                <Label Text="Actual Hours" FontSize="Small" WidthRequest="100"/>
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Label Text="ID" FontSize="Small" WidthRequest="40" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Description" FontSize="Small" WidthRequest="160" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Estimated Hours" FontSize="Small" WidthRequest="140" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Actual Hours" FontSize="Small" WidthRequest="130" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
             <ListView x:Name="dataGrid">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                    <Label Text="{Binding ID}" WidthRequest="30" />
-                                    <Label Text="{Binding Description}" WidthRequest="150" />
-                                    <Label Text="{Binding EstimatedHours}" WidthRequest="140" />
-                                    <Label Text="{Binding ActualHours}" WidthRequest="130" />
+                            <StackLayout Orientation="Horizontal" Padding="5" >
+                                    <Label Text="{Binding ID}"  HorizontalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding Description}" WidthRequest="160" HorizontalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding EstimatedHours}" WidthRequest="140" HorizontalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding ActualHours}" WidthRequest="130" HorizontalOptions="CenterAndExpand" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
