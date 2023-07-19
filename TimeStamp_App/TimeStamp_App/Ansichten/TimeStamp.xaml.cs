@@ -26,7 +26,7 @@ namespace TimeStamp_App.Ansichten
             {
                 DisplayAlert("Error", err.GetException().Message, "OK");
             }
-            Picker.ItemsSource = list.Select(x => x.Description).ToList();
+            Picker.ItemsSource = list.Select(x => x.ID).ToList();
         }
         
         private async void GoBackToOverview_Clicked(object sender, EventArgs e)
@@ -55,30 +55,30 @@ namespace TimeStamp_App.Ansichten
                 isTimerRunning = false;
                 elapsedTime = DateTime.Now - startTime;
                 // Zeit in DB schreiben
-                var (list, err) = Rw_Tasks.ReadwithDescription(Picker.SelectedItem.ToString(),Paths.sqlite_path);
+                var (list, err) = Rw_Tasks.ReadwithID(Picker.SelectedItem.ToString(),Paths.sqlite_path);
                 if(err != null)
                 {
                     DisplayAlert("Error", err.GetException().Message, "OK");
                 }
-                string ID = list.Select(x => x.ID).ToString();
-                string orderId = list.Select(x => x.orderID).ToString();
-                string Description = list.Select(x => x.Description).ToString();
-                string UserName = list.Select(x => x.Username).ToString();
-                string EstimatedString = list.Select(x => x.EstimatedHours).ToString();
-                float Estimated = float.Parse(EstimatedString);
-                string ActualString = list.Select(x => x.ActualHours).ToString() + elapsedTime.ToString();
-                float ActualHours = float.Parse(ActualString) + (float)elapsedTime.TotalHours;
-                string CostsString = list.Select(x => x.Costs).ToString();
-                float Costs = float.Parse(CostsString);
+                string ID = (string)list[0].ID.ToString();
+                string orderId = (string)list[0].OrderId.ToString();
+                string Description = (string)list[0].Description.ToString();
+                string Ressource = (string)list[0].Ressource.ToString();
+                string UserName = (string)list[0].Username.ToString();
+                float Estimated = (float)list[0].EstimatedHours;
+                float Actual = (float)list[0].ActualHours + (float)elapsedTime.TotalHours;
+                float Costs = (float)list[0].Costs;
+                
                 
                 var data = new Db_Tasks()
                 {
                     ID = ID,
-                    orderID = orderId,
+                    OrderId =  orderId,
                     Description = Description,
+                    Ressource = Ressource,
                     Username = UserName,
                     EstimatedHours = Estimated,
-                    ActualHours = ActualHours,
+                    ActualHours = Actual,
                     Costs = Costs,
                 };
                 Rw_Tasks.Write(new List<Db_Tasks> {data}, Paths.sqlite_path);

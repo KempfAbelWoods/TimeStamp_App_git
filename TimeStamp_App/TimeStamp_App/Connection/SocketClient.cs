@@ -16,7 +16,7 @@ namespace TimeStamp_App.Connection
 
         public async static void SocketClientCode(string senddata)
         {
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[2048];
             byte[] data;
             int bytesRead;
             string response;
@@ -68,7 +68,7 @@ namespace TimeStamp_App.Connection
         
         public async static void SocketClientUser(string senddata)
         {
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[2048];
             byte[] data;
             int bytesRead;
             string response;
