@@ -29,7 +29,8 @@ namespace TimeStamp_App.Ansichten
             for (int i = 0; i < list.Count; i++)
             {
                 
-                tasks.Add(new Db_Tasks { ID = list[i].ID, Username = list[i].Username});
+                tasks.Add(new Db_Tasks { ID = list[i].ID, Description = list[i].Description, 
+                    ActualHours = list[i].ActualHours, EstimatedHours = list[i].EstimatedHours});
             }
             
 
