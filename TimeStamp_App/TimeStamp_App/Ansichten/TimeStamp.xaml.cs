@@ -66,8 +66,11 @@ namespace TimeStamp_App.Ansichten
                 string Ressource = (string)list[0].Ressource.ToString();
                 string UserName = (string)list[0].Username.ToString();
                 float Estimated = (float)list[0].EstimatedHours;
+                float EstimatedRounded = (float)Math.Round(Estimated, 2);
                 float Actual = (float)list[0].ActualHours + (float)elapsedTime.TotalHours;
+                float ActualRounded = (float)Math.Round(Actual, 2);
                 float Costs = (float)list[0].Costs;
+                float CostsRounded = (float)Math.Round(Costs, 2);
                 
                 
                 var data = new Db_Tasks()
@@ -77,9 +80,9 @@ namespace TimeStamp_App.Ansichten
                     Description = Description,
                     Ressource = Ressource,
                     Username = UserName,
-                    EstimatedHours = Estimated,
-                    ActualHours = Actual,
-                    Costs = Costs,
+                    EstimatedHours = EstimatedRounded,
+                    ActualHours = ActualRounded,
+                    Costs = CostsRounded,
                 };
                 Rw_Tasks.Write(new List<Db_Tasks> {data}, Paths.sqlite_path);
 
@@ -96,6 +99,28 @@ namespace TimeStamp_App.Ansichten
             else
             {
                 return false; // Timer beenden
+            }
+        }
+
+        private async void ManualTime(object sender, EventArgs e)
+        {
+            var (Row, err2) = Rw_Settings.ReadwithID("1", Paths.sqlite_path);
+            if (err2 != null)
+            {
+                DisplayAlert("Error", err2.GetException().Message, "OK");
+            }
+
+            if (Row[0].Ressource == "admin")
+            {
+                await Navigation.PushAsync(new ManualTime());
+            }
+            else if (err2 == null)
+            {
+                DisplayAlert("Error", "Nicht die benötigten Rechte!", "OK");
+            }
+            else
+            {
+                DisplayAlert("Error", "Nicht die benötigten Rechte!", "OK");
             }
         }
     }

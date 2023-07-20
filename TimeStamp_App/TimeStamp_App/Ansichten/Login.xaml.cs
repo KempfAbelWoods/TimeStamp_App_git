@@ -110,10 +110,10 @@ namespace TimeStamp_App.Ansichten
         }
     }
 
-         void Abbrechen_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+         async void Abbrechen_OnClicked(object sender, EventArgs e)
+         {
+             await Navigation.PopAsync();
+         }
 
     }
 }

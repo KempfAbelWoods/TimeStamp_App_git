@@ -2,28 +2,27 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TimeStamp_App.Ansichten.TimeStamp">
+             xmlns:local="clr-namespace:TimeStamp_App.Ansichten;assembly=TimeStamp_App"
+             x:Class="TimeStamp_App.Ansichten.ManualTime">
     <ContentPage.Content>
-        <StackLayout
+        <StackLayout 
             Margin="20"
-            Spacing="20">
+            Spacing="20"
+            HorizontalOptions="Center">
             
             <Label FontSize="22" 
                    Text="Die zu bearbeitende Task auswählen"></Label>
             <Picker x:Name="Picker" 
                     WidthRequest="200" 
                     HorizontalOptions="Center"></Picker>
-            <Button Text="Arbeitsauftrag beginnen"
-                    Clicked="TimeStart" />
-            <Button Text="Arbeitsauftrag beenden"
-                    Clicked="TimeStop" />
-            <Button Text="Zeit Manuell schreiben"
-                    Clicked="ManualTime" />
+            <Editor x:Name="EnteredTime"
+                    Placeholder="Hier die Zeit als KOMMAZAHL eingeben!!" ></Editor>
+            <Button Text="Zeit Nachtragen"
+                    Clicked="AddTime" />
             <Button Text="Back"
                     Clicked="GoBackToOverview_Clicked"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
