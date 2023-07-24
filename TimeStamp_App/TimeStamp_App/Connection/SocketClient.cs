@@ -84,7 +84,7 @@ namespace TimeStamp_App.Connection
             // Erstelle ein NetworkStream-Objekt für die Kommunikation
             NetworkStream networkStream = client.GetStream();
 
-            // Sende Daten an den Server
+            // Sende User an den Server
             var (list, err) = Rw_Settings.ReadwithID("1", Paths.sqlite_path);
             if (err != null)
             {

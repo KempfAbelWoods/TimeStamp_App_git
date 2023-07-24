@@ -17,18 +17,27 @@ namespace TimeStamp_App.Ansichten
         private DateTime startTime;
         private TimeSpan elapsedTime;
         public List<Db_Tasks> Tasks { get; set; }
+
         public TimeStamp()
         {
             InitializeComponent();
-            
-            var (list, err) = Rw_Tasks.Read("",Paths.sqlite_path);
-            if(err != null)
+
+            var (Row, err2) = Rw_Settings.ReadwithID("1", Paths.sqlite_path);
+            if (err2 != null)
+            {
+                DisplayAlert("Error", err2.GetException().Message, "OK");
+            }
+
+            var (list, err) = Rw_Tasks.Read("", Paths.sqlite_path);
+            if (err != null)
             {
                 DisplayAlert("Error", err.GetException().Message, "OK");
             }
-            Picker.ItemsSource = list.Select(x => x.ID).ToList();
+            
+            Picker.ItemsSource = list.Where(x => x.Username == Row[0].Ressource).Select(x => x.ID).ToList();
+
         }
-        
+
         private async void GoBackToOverview_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
@@ -55,11 +64,12 @@ namespace TimeStamp_App.Ansichten
                 isTimerRunning = false;
                 elapsedTime = DateTime.Now - startTime;
                 // Zeit in DB schreiben
-                var (list, err) = Rw_Tasks.ReadwithID(Picker.SelectedItem.ToString(),Paths.sqlite_path);
-                if(err != null)
+                var (list, err) = Rw_Tasks.ReadwithID(Picker.SelectedItem.ToString(), Paths.sqlite_path);
+                if (err != null)
                 {
                     DisplayAlert("Error", err.GetException().Message, "OK");
                 }
+
                 string ID = (string)list[0].ID.ToString();
                 string orderId = (string)list[0].OrderId.ToString();
                 string Description = (string)list[0].Description.ToString();
@@ -71,12 +81,12 @@ namespace TimeStamp_App.Ansichten
                 float ActualRounded = (float)Math.Round(Actual, 2);
                 float Costs = (float)list[0].Costs;
                 float CostsRounded = (float)Math.Round(Costs, 2);
-                
-                
+
+
                 var data = new Db_Tasks()
                 {
                     ID = ID,
-                    OrderId =  orderId,
+                    OrderId = orderId,
                     Description = Description,
                     Ressource = Ressource,
                     Username = UserName,
@@ -84,11 +94,10 @@ namespace TimeStamp_App.Ansichten
                     ActualHours = ActualRounded,
                     Costs = CostsRounded,
                 };
-                Rw_Tasks.Write(new List<Db_Tasks> {data}, Paths.sqlite_path);
-
+                Rw_Tasks.Write(new List<Db_Tasks> { data }, Paths.sqlite_path);
             }
         }
-        
+
         private bool UpdateTimer()
         {
             if (isTimerRunning)
