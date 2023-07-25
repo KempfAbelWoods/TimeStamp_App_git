@@ -47,7 +47,7 @@ namespace TimeStamp_App.Connection
                 var (taskList, error) = Rw_Tasks.Read("", Paths.sqlite_path);
                 string jsonString = JsonConvert.SerializeObject(taskList);
                 data = Encoding.ASCII.GetBytes(jsonString);
-                networkStream.Write(data,0,data.Length);
+                networkStream.Write(data, 0, data.Length);
             }
 
 
@@ -65,7 +65,7 @@ namespace TimeStamp_App.Connection
 
             Trace.WriteLine("Verbindung geschlossen.");
         }
-        
+
         public async static void SocketClientUser(string senddata)
         {
             byte[] buffer = new byte[2048];
@@ -74,7 +74,7 @@ namespace TimeStamp_App.Connection
             string response;
             string message;
             string serverIpAddress = "192.168.2.110";
-            
+
             // Erstelle eine TCP/IP-Verbindung
             TcpClient client = new TcpClient();
             client.Connect(serverIpAddress, Port);
@@ -90,6 +90,7 @@ namespace TimeStamp_App.Connection
             {
                 Trace.WriteLine(err.GetException().Message);
             }
+
             message = list[0].Ressource;
             data = Encoding.ASCII.GetBytes(message);
             networkStream.Write(data, 0, data.Length);
@@ -104,7 +105,7 @@ namespace TimeStamp_App.Connection
                 var (taskList, error) = Rw_Tasks.Read("", Paths.sqlite_path);
                 string jsonString = JsonConvert.SerializeObject(taskList);
                 data = Encoding.ASCII.GetBytes(jsonString);
-                networkStream.Write(data,0,data.Length);
+                networkStream.Write(data, 0, data.Length);
             }
             else
             {

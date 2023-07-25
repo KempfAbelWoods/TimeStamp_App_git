@@ -2,17 +2,21 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TimeStamp_App.Ansichten.TimeStamp">
-    <ContentPage.Content>
+             x:Class="TimeStamp_App.Ansichten.TimeStamp"
+             Title="Zeiten Stempeln">
+        
+        <ContentPage.Content>
         <StackLayout
             Margin="20"
             Spacing="20">
-            
-            <Label FontSize="22" 
-                   Text="Die zu bearbeitende Task auswählen"></Label>
-            <Picker x:Name="Picker" 
-                    WidthRequest="200" 
-                    HorizontalOptions="Center"></Picker>
+
+            <Label FontSize="22"
+                   Text="Die zu bearbeitende Task auswählen">
+            </Label>
+            <Picker x:Name="Picker"
+                    WidthRequest="200"
+                    HorizontalOptions="Center">
+            </Picker>
             <Button Text="Arbeitsauftrag beginnen"
                     Clicked="TimeStart" />
             <Button Text="Arbeitsauftrag beenden"

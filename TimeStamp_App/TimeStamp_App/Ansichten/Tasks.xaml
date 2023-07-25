@@ -2,24 +2,26 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TimeStamp_App.Ansichten.Tasks">
+             x:Class="TimeStamp_App.Ansichten.Tasks"
+             Title="Arbeitsaufträge">
+
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" Padding="5">
-                <Label Text="ID" FontSize="Small" WidthRequest="40" HorizontalOptions="Center"/>
-                <Label Text="Description" FontSize="Small" WidthRequest="160" HorizontalOptions="Center"/>
-                <Label Text="Estimated Hours" FontSize="Small" WidthRequest="140" HorizontalOptions="Center"/>
-                <Label Text="Actual Hours" FontSize="Small" WidthRequest="130" HorizontalOptions="Center"/>
+                <Label Text="ID" FontSize="Small" WidthRequest="40" HorizontalOptions="Center" />
+                <Label Text="Description" FontSize="Small" WidthRequest="160" HorizontalOptions="Center" />
+                <Label Text="Estimated Hours" FontSize="Small" WidthRequest="140" HorizontalOptions="Center" />
+                <Label Text="Actual Hours" FontSize="Small" WidthRequest="130" HorizontalOptions="Center" />
             </StackLayout>
             <ListView x:Name="dataGrid">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="5" >
-                                    <Label Text="{Binding ID}" WidthRequest="40" HorizontalOptions="Center" />
-                                    <Label Text="{Binding Description}" WidthRequest="160" HorizontalOptions="Center" />
-                                    <Label Text="{Binding EstimatedHours}" WidthRequest="140" HorizontalOptions="Center" />
-                                    <Label Text="{Binding ActualHours}" WidthRequest="130" HorizontalOptions="Center" />
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Label Text="{Binding ID}" WidthRequest="40" HorizontalOptions="Center" />
+                                <Label Text="{Binding Description}" WidthRequest="160" HorizontalOptions="Center" />
+                                <Label Text="{Binding EstimatedHours}" WidthRequest="140" HorizontalOptions="Center" />
+                                <Label Text="{Binding ActualHours}" WidthRequest="130" HorizontalOptions="Center" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
